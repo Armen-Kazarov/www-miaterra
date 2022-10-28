@@ -1,4 +1,12 @@
-body {
-  background-color: rgb(233, 21, 198);
-  
-}
+@import 'base/normalize';
+@import 'fonts';
+@import 'base/reset';
+@import 'helpers/mixins';
+
+/* Components */
+@import 'components/container';
+
+
+/* Sections */
+@import 'sections/header';
+@import 'sections/hero';

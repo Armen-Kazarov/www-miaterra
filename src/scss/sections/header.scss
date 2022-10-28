@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  
+  .navigation-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 46px;
+  }
+
+  &__navigation {
+    .menu-list {
+      @include font(20px);
+
+      &__item::first-letter {
+        text-transform: uppercase;
+      }
+
+      &__item:not(:last-of-type) {
+        padding-right: 40px;
+      }
+
+      &__link {
+        color: aqua;
+      }
+    }
+  }
+}
