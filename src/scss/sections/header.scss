@@ -25,7 +25,19 @@
       }
 
       &__link {
-        color: aqua;
+        color: $first-color;
+        transition-property:
+          color;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+
+        &:hover {
+          color: $third-color;
+          transition-property:
+            color;
+          transition-duration: 0.2s;
+          transition-timing-function: linear;
+        }
       }
     }
   }

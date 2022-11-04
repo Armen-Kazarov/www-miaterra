@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 40px;
+  padding: 14px 44px;
+  @include font(18px);
+  font-weight: 700;
+  line-height: 24px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
