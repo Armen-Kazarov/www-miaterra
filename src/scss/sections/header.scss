@@ -4,12 +4,23 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  
+
   .navigation-wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 46px;
+
+    .logo,
+    .logo-white {
+      width: 104px;
+      height: 42px;
+    }
+  }
+
+  .menu__icon,
+  .logo-white {
+    display: none;
   }
 
   &__navigation {
@@ -22,6 +33,14 @@
 
       &__item:not(:last-of-type) {
         padding-right: 40px;
+      }
+
+      &__item:nth-last-of-type(2) {
+        border-right: 1px solid #fff;
+      }
+
+      &__item:last-of-type {
+        padding-left: 40px;
       }
 
       &__link {
@@ -41,4 +60,117 @@
       }
     }
   }
+
+  @media (max-width: 1260px) {
+    .container {
+      padding-right: 22px;
+      padding-left: 22px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .menu__icon {
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 12px;
+      cursor: pointer;
+
+      span,
+      &::before,
+      &::after {
+        right: 0;
+        position: absolute;
+        height: 16%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+      }
+
+      &::after {
+        width: 50%;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      span {
+        top: 50%;
+        transform: scale(1), translate(0, -50%);
+      }
+
+      &._active {
+        span {
+          transform: scale(0) translate(0, -50%);
+        }
+
+        &::before {
+          top: 50%;
+          transform: rotate(-45deg) translate(0px, -50%);
+        }
+
+        &::after {
+          width: 100%;
+          bottom: 50%;
+          transform: rotate(45deg) translate(0px, 50%);
+        }
+      }
+    }
+
+    .menu__body {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: $third-color;
+      padding: 0 62px 80px;
+      transition: left 0.3s ease 0s;
+      overflow: auto;
+
+      .menu__logo {
+        position: fixed;
+        width: 100%;
+        background-color: $third-color;
+        padding-top: 46px;
+      }
+
+      .logo-white {
+        display: block;
+      }
+      
+      .menu-list {
+        @include font(80px);
+        line-height: 104px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 180px;
+
+        &__item {
+          padding: 0;
+          border: none;
+        }
+
+        &__link:hover {
+          color: $first-color;
+        }
+      }
+    }
+
+    .menu__body._active {
+        left: 0;
+      }
+  }
 }
+

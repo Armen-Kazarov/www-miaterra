@@ -17,6 +17,10 @@ body {
     scroll-behavior: smooth;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;

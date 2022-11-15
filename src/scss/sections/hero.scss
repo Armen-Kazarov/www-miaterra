@@ -11,12 +11,16 @@
   }
 
   &__content-wrapper {
+    padding-top: 90px;
+    text-align: center;
     width: 100%;
   }
   
   &__title {
+    text-align: left;
     width: 100%;
     padding-left: 18.6%;
+    margin-bottom: 70px;
 
     &-first-line,
     &-second-line,
@@ -62,6 +66,17 @@
     display: inline-block;
     color: $first-color;
     background: $third-color;
-    margin: 0 auto;
+    transition-property:
+      background;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+
+    &:hover {
+      transition-property:
+        background;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+      background: #A01C17;
+    }
   }
 }
