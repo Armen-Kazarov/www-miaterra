@@ -560,7 +560,7 @@ ul {
     content: "";
     display: block;
     height: 1px;
-    width: 600px;
+    width: 100%;
     background-color: #fff;
   }
   .header .menu__body .menu-list__item:last-of-type {
@@ -678,4 +678,36 @@ ul {
   transition-duration: 0.2s;
   transition-timing-function: linear;
   background: #A01C17;
+}
+@media (max-width: 767px) {
+  .hero .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero .hero__title {
+    padding-left: 0;
+    text-align: center;
+  }
+  .hero .hero__title-first-line {
+    padding-left: 12%;
+    font-family: Mont;
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .hero .hero__title-second-line {
+    font-family: Mont;
+    font-style: normal;
+    font-size: 76px;
+    line-height: 1;
+  }
+  .hero .hero__title-third-line {
+    padding-left: 6%;
+    font-family: Mont;
+    font-style: normal;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1;
+  }
 }

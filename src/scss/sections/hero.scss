@@ -79,4 +79,37 @@
       background: #A01C17;
     }
   }
+
+  @media (max-width: 767px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    .hero {
+      &__title {
+        padding-left: 0;
+        text-align: center;
+       
+        &-first-line {
+          padding-left: 12%;
+          @include font(28px);
+          font-weight: 600;
+          line-height: 1;
+        }
+
+        &-second-line {
+          @include font(76px);
+          line-height: 1;
+        }
+
+        &-third-line {
+          padding-left: 6%;
+          @include font(56px);
+          font-weight: 600;
+          line-height: 1;
+        }
+      }
+    }
+  }
 }
