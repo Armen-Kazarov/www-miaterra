@@ -152,6 +152,8 @@
         width: 100%;
         background-color: $third-color;
         padding-top: 46px;
+        margin-left: -62px;
+        padding-left: 62px;
       }
 
       .logo-white {
@@ -239,5 +241,12 @@
         left: 0;
       }
   }
-}
 
+  @media(max-width: 768px) {
+    .menu__body {
+      .menu__logo {
+        padding-left: 22px;
+      }
+    }
+  }
+}

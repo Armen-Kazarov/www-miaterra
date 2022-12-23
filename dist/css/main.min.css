@@ -535,6 +535,8 @@ ul {
     width: 100%;
     background-color: #E96B67;
     padding-top: 46px;
+    margin-left: -62px;
+    padding-left: 62px;
   }
   .header .menu__body .logo-white {
     display: block;
@@ -602,6 +604,11 @@ ul {
   }
   .header .menu__body._active {
     left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header .menu__body .menu__logo {
+    padding-left: 22px;
   }
 }
 
