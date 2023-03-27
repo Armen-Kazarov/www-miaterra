@@ -51,6 +51,7 @@
         transition-timing-function: linear;
 
         &:hover {
+          text-decoration: none;
           color: $third-color;
           transition-property:
             color;
